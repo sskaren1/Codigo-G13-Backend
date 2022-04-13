@@ -15,9 +15,9 @@
 # INPUTS - ENTRADAS
 montoOrigen= input("Ingrese el monto a convertir: ")
 # PROCESO
-opcion = ""
+opcion = "0"
 
-while(opcion == ""):
+while(opcion == "0"):
     print (" opción 1 - soles a dolares")
     print (" opción 2 - dolares a soles")
     print (" opción 3 - soles a euros")
@@ -45,5 +45,5 @@ while(opcion == ""):
         print("El monto en soles es: " , montoSolesFormato)
     else:
         print("ALERTA!!! Debe seleccionar una opción valida")
-        opcion = ""
+        opcion = "0"
         
