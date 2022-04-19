@@ -1,0 +1,8 @@
+# Creando un entorno virtual en python
+- Instalar en el terminal: python -m venv venv
+
+# Para activar el entorno virtual
+- en el terminal: source venv/Scripts/activate
+
+# Para desactivar el entorno virtual
+- en el terminal: deactivate
