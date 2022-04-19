@@ -20,6 +20,8 @@ for capital in capitales:
 print(capitales.keys())
 print(capitales.values())
 print(capitales.items())
+# para hallar la cantidad de elementos de la lista
+print(len(capitales.items()))
 for clave in capitales.keys():
     print(clave + " => " + capitales[clave])
     

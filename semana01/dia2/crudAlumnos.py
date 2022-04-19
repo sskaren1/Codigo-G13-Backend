@@ -37,8 +37,50 @@ while(opcion != 5):
         print(tabulate.tabulate(registros,cabeceras))
     elif(opcion == 3):
         print("ACTUALIZAR ALUMNO")
+        #PASO 1 BUSCAR EL ALUMNO A EDITAR
+        valorBusqueda = input("Ingrese el email del alumno a actualizar : ")
+        indexAlumno = -1
+        for i in range(len(alumnos)):
+            dicAlumnoBusqueda = alumnos[i]
+            for clave,valor in dicAlumnoBusqueda.items():
+                if(valor == valorBusqueda and clave == 'email'):
+                    indexAlumno = i
+                    break
+        #print("el alumno esta en el indice : " + str(indexAlumno))
+        #print("datos del alumno : " + str(alumnos[indexAlumno]))
+        #PASO 2 INGRESAR LOS NUEVOS VALORES PARA EL ALUMNO A EDITAR
+        if(indexAlumno == -1):
+            print("No se encontro el email del alumno")
+        else:
+            nombre  = input("NOMBRE  : ")
+            email   = input("EMAIL   : ")
+            celular = input("CELULAR : ")
+            dictAlumnoEditar = {
+                'nombre':nombre,
+                'email':email,
+                'celular':celular
+            }
+            #PASO 3 ACTUALIZAR LOS DATOS DEL ALUMNO A EDITAR
+            alumnos[indexAlumno] = dictAlumnoEditar
+            print("ALUMNO ACTUALIZADO !!!")
     elif(opcion == 4):
         print("ELIMINAR ALUMNO")
+        #PASO 1 BUSCAR EL ALUMNO A ELIMINAR
+        valorBusqueda = input("Ingrese el email del alumno a eliminar : ")
+        indexAlumno = -1
+        for i in range(len(alumnos)):
+            dicAlumnoBusqueda = alumnos[i]
+            for clave,valor in dicAlumnoBusqueda.items():
+                if(valor == valorBusqueda and clave == 'email'):
+                    indexAlumno = i
+                    break
+        #PASO 2 INGRESAR LOS NUEVOS VALORES PARA EL ALUMNO A ELIMINAR
+        if(indexAlumno == -1):
+            print("No se encontro el email del alumno")
+        else:
+            #ELIMINAR EL ALUMNO
+            alumnos.pop(indexAlumno)
+            print("ALUMNO ELIMINADO !!!")
     elif(opcion == 5):
         print("FINALIZANDO PROGRAMA")
     else:
