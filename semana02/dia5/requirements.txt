@@ -2,3 +2,8 @@
 flask
 firebase_admin
 python-dotenv
+
+# Extensiones Flask
+flask.bootstrap # Integra boostrap copn flask
+Flask.WTF #WHAT THE FORM - Validacion de campos
+pyrebase4
